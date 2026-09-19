@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Parmak Klavye Hız Testi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="brand">
+        <div class="brand-mark">B</div>
+        <div class="brand-text">
+          <strong>BETPUF</strong>
+          <span>10 Parmak Klavye Hız Testi</span>
+        </div>
+      </div>
+      <button id="newTest" class="new-test" type="button">Yeni Test</button>
+    </header>
+
+    <main>
+      <section class="title-area">
+        <div>
+          <div class="eyebrow">KLAVYE HIZ TESTİ</div>
+          <h1>10 Parmak Yazma Hızı</h1>
+        </div>
+        <div class="best-box">
+          <span>En İyi DBK</span>
+          <strong id="bestWpm">0</strong>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button class="duration" data-duration="60" type="button">60 sn</button>
+        <button class="duration" data-duration="120" type="button">120 sn</button>
+      </section>
+
+      <section class="stats">
+        <div class="stat"><span>Süre</span><strong id="time">00:30</strong></div>
+        <div class="stat"><span>DBK</span><strong id="wpm">0</strong></div>
+        <div class="stat"><span>Doğruluk</span><strong id="accuracy">100%</strong></div>
+        <div class="stat"><span>Hata</span><strong id="errors">0</strong></div>
+      </section>
+
+      <section class="test-card">
+        <div class="test-head">
+          <span>Metni satır satır yazın</span>
+          <span id="state">Başlamak için yazmaya başlayın</span>
+        </div>
+
+        <div id="textDisplay" class="text-display" aria-label="Klavye hız testi metni"></div>
+
+        <textarea
+          id="typingInput"
+          class="typing-input"
+          rows="1"
+          spellcheck="false"
+          autocomplete="off"
+          autocapitalize="off"
+          aria-label="Klavye hız testi yazma alanı"
+          placeholder="Buraya tıklayıp yazmaya başlayın..."
+        ></textarea>
+
+        <div class="progress"><div id="progressBar"></div></div>
+      </section>
+
+      <section class="keyboard-card">
+        <div class="keyboard-head">
+          <span class="eyebrow">KLAVYE</span>
+          <span>Tuştan kullanım yoğunluğu</span>
+        </div>
+        <div id="keyboard" class="keyboard" aria-label="Türkçe Q klavye"></div>
+      </section>
+
+      <section id="result" class="result hidden">
+        <div class="result-main">
+          <div class="eyebrow">TEST SONUCU</div>
+          <strong id="finalWpm">0</strong>
+          <span>dakikadaki kelime</span>
+        </div>
+        <div class="result-grid">
+          <div><span>Doğruluk</span><strong id="finalAccuracy">0%</strong></div>
+          <div><span>Toplam karakter</span><strong id="finalChars">0</strong></div>
+          <div><span>Doğru karakter</span><strong id="finalCorrect">0</strong></div>
+          <div><span>Hatalı karakter</span><strong id="finalErrors">0</strong></div>
+        </div>
+        <button id="again" class="again" type="button">Tekrar Başlat</button>
+      </section>
+    </main>
+
+    <footer>10 Parmak Klavye Hız Testi</footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
